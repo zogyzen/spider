@@ -38,7 +38,7 @@ const char* CHttpGet::SyncHttpGet(int& len, const char* domain, const char* path
     {
         stringstream respond_stream;
         respond_stream.write(p, iCount);
-        string s;
+        string s = "";
         while (std::getline(respond_stream, s) && "\r" != s)
         {
             // cout << s << endl;
